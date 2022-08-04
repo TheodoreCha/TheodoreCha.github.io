@@ -74,7 +74,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "An Entrepreneur <br>Ruby on Rails developer"
+sidebar-about-description: "An entrepreneur and Ruby on Rails developer living in Stockholm."
 sidebar-avatar: https://github.com/theodorecha.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
