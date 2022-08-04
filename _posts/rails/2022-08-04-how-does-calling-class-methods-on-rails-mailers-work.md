@@ -58,7 +58,7 @@ end
 ```
 
 Now, Look at line 45 - `UserNotifierMailer.send_signup_email(@user).deliver`. it is a way to call a class method.
-but we call that as an instance method `def send_signup_email` without `self` prefix.
+but we created an instance method `def send_signup_email`  rather than a class method with  `self` prefix.
 
 ### [Ruby: class methods vs. instance methods](https://dev.to/adamlombard/ruby-class-methods-vs-instance-methods-4aje)
 
