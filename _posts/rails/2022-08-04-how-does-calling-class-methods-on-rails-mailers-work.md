@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How does calling class methods on Rails mailers work"
+title: "How does class methods on Rails Action Mailers work"
 subtitle: "Rails Magic"
 date: 2022-08-04
 author: "Theo"
