@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: theodorcha@gmail.com
 description: "Programmers is not people who codes. Programmers are people who solve business problems."
 keyword: "Theo Blog, Fullstack developer, Ruby on Rails, React, AWS, Startup, Sweden, Stockholm, Marketplace, Rspec, Ruby, Javascript"
-url: "https://theocha.github.io"
+url: "https://theodorecha.github.io"
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
