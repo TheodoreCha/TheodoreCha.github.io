@@ -9,6 +9,6 @@ I live in Stockholm as a Swedish Citizen. I speak Korean as my mother language a
 
 ##### Appearence
 
-- [Breakit – Mar 2022][1] · Breakit is Sweden's news site about tech companies and startups. · 2022
+- [Breakit – Mar 2022][1] · Breakit is Sweden's news site about tech companies and startups.
 
 [1]: https://www.breakit.se/artikel/32311/nio-nya-startups-backas-av-handelshogskolan
