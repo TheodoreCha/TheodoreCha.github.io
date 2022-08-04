@@ -1,12 +1,14 @@
-안녕하세요 테오입니다. 저는 [Spunshift](https://www.spunshift.com)의 기술 공동 설립자입니다.
+Hi, I am Theo. I am a tech co-founder of [Spunshift](https://www.spunshift.com).
 
-프로그래머는 그냥 코딩만 사람이 아니라고 생각합니다. 프로그래머는 비즈니스 문제를 해결하는 사람들입니다. 프로그래머가 10,000줄의 코드를 작성했다고 해서 좋은 프로그래머가 되는 것은 아닙니다. 천 줄이든 만 줄이든 간에 어떤 비즈니스 가치를 창출하느냐가 중요합니다. 코딩 그 자체가 아니라 비즈니스 가치가 나의 가치를 증명한다고 생각합니다.
+I believe that programmers are not people who code. Programmers are people who solve business problems. Just because a programmer has written 10,000 lines of code doesn't make you a good programmer. Whether it is a thousand lines or ten thousand lines, it is important what business value you create. The business value proves my value, not the coding itself.
 
-저는 디지털서울대학교에서 컴퓨터공학 학사를 전공했습니다.
+I studied BS, Computer Science at Digital Seoul university.
 
-저는 스웨덴 시민으로 스톡홀름에 살고 있습니다. 나는 한국어를 모국어로 하고 영어와 중국어를 전문 수준으로, 스웨덴어를 초급 수준에서 구사합니다.
-##### 미디어
+I live in Stockholm as a Swedish Citizen. I speak Korean as my mother language and English and Chinese at a professional level and Swedish at a beginner level.
 
-- [Breakit – 2022년 3월][1] · Breakit은 기술 회사 및 신생 기업에 관한 스웨덴의 뉴스 사이트입니다. · 2022년
+
+##### Appearence
+
+- [Breakit – Mar 2022][1] · Breakit is Sweden's news site about tech companies and startups.
 
 [1]: https://www.breakit.se/artikel/32311/nio-nya-startups-backas-av-handelshogskolan
