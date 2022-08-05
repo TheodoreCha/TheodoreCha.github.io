@@ -96,10 +96,29 @@ expect {
 }
 ```
 
+Working with mailer matcher
+### [Have_enqueued_mail matcher](https://relishapp.com/rspec-staging/rspec-rails/docs/matchers/have-enqueued-mail-matcher)
+
+**Checking mailer class and method name**
+
+```cpp
+require "rails_helper"
+
+RSpec.describe NotificationsMailer do
+  it "matches with enqueued mailer" do
+    ActiveJob::Base.queue_adapter = :test
+    expect {
+      NotificationsMailer.signup.deliver_later
+    }.to have_enqueued_mail(NotificationsMailer, :signup)
+  end
+end
+```
+
 References
 ----------
 
 - <https://www.rubydoc.info/gems/rspec-rails/RSpec%2FRails%2FMatchers%3Ahave_enqueued_job>
+- <https://relishapp.com/rspec-staging/rspec-rails/docs/matchers/have-enqueued-mail-matcher>
 
 
 
