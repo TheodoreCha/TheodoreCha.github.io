@@ -96,8 +96,9 @@ expect {
 }
 ```
 
-Working with mailer matcher
 ### [Have_enqueued_mail matcher](https://relishapp.com/rspec-staging/rspec-rails/docs/matchers/have-enqueued-mail-matcher)
+
+Plus: Working with mailer matcher
 
 **Checking mailer class and method name**
 
