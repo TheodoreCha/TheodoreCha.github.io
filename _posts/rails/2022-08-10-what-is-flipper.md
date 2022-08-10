@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "What is Flipper"
-subtitle: "Hello World, Hello Blog"
+title: "Feature flags in Ruby on Rails "
+subtitle: "Feat. Flipper"
 date: 2022-08-10
 author: "Theo Cha"
 tags:
