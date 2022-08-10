@@ -3,7 +3,7 @@ layout: post
 title: "How to test ActiveJob is enqueued in a controller?"
 subtitle: "Rails ActiveJob"
 date: 2022-08-05
-author: "Theo"
+author: "Theo Cha"
 # header-img: "img/post-bg-2015.jpg"
 tags:
     - Ruby on Rails

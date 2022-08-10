@@ -3,8 +3,7 @@ layout: post
 title: "How does class methods on Rails Action Mailers work"
 subtitle: "Rails Magic"
 date: 2022-08-04
-author: "Theo"
-# header-img: "img/post-bg-2015.jpg"
+author: "Theo Cha"
 tags:
     - Ruby on Rails
 ---
