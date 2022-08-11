@@ -59,7 +59,7 @@ end
 
 - Thin Rails controller and GraphQL resolver: they are mainly responsible for understanding requests and responses.
 - Re-usable services
-- Testable: Since the logic in a controller or resolver is thinner and simpler, it becomes really easy to test. also,  testing business processes becomes more isolated.
+- Testable: Since the logic in a controller or resolver is thinner and simpler, it becomes really easy to test. also, testing business processes becomes more isolated. it is easier to stub and check whether specific processes are invoked within our service.
 
 
 ### Implement
@@ -132,6 +132,13 @@ class ProductController < ApplicationController
   end
 end
 ```
+
+References
+----------
+
+- <https://www.toptal.com/ruby-on-rails/rails-service-objects-tutorial>
+- <https://www.honeybadger.io/blog/refactor-ruby-rails-service-object/>
+
 
 
 
