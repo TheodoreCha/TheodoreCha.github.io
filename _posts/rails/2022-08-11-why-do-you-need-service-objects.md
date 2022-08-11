@@ -2,7 +2,7 @@
 layout: post
 title: "Why You Need Service Objects"
 subtitle: "Ruby on Rails service objects"
-date: 2022-08-10
+date: 2022-08-11
 author: "Theo Cha"
 tags:
     - Ruby on Rails
