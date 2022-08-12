@@ -2,7 +2,7 @@
 layout: post
 title: "TDD GraphQL on Rails"
 subtitle: "Ruby on Rails with Rspec"
-date: 2022-08-11
+date: 2022-08-12
 author: "Theo Cha"
 tags:
     - Ruby on Rails
@@ -37,11 +37,9 @@ In this article, I will use the following technologies:
 - Create queries feature.
 - Create mutations feature.
 
-### Implementation
+### Queries
 ----------------------------------------
-
-First let’s create a `new ProductCreator` And then just dump all our logic inside a new Ruby class:
-
+#### Setup specs
 ```cpp
 class ProductCreator
   def initialize(name:)
