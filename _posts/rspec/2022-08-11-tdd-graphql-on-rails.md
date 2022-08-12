@@ -15,57 +15,29 @@ tags:
 
 ![GraphQL is cool](/img/post/graphql-is-cool.jpeg "GraphQL is cool")
 
-### Query for Returning product
+### Introduction
 ----------------------------------------
 
-We have a `product.rb` file in `app/models` that will looks as following:
+It has been a long time working with Rails + GraphQL technologies. so, I want to recap the Rails + GraphQL and summarize a few points by writing this public tutorial.
 
-```cpp
-class Product < ApplicationRecord
-end
-```
+In this article, I will use the following technologies:
 
-This seems fine but as your application grows, things can easily become a mess. For example,
+- Ruby on Rails
+- GraphQL gem
+- Rspec
 
-```cpp
-class ProductController < ApplicationController
- def create
-    default_args = { genre: find_category(), location: find_store_location() }
-    Product.new(attrs.merge(default_args))
- end
-
- private
-
- def find_category
-   // ...
- end
-
-  def find_store_location
-   // ...
- end
-end
-```
-
-Service objects allow you to extract this logic into a separate class. This simplifies the code in a better way.
-
-```cpp
-class ProductController < ApplicationController
-  def
-    ProductCreator.create_product
-  end
-end
-
-```
-
-### Benefits of encapsulating business logic:
+### Getting started
 ----------------------------------------
 
-- Thin Rails controller and GraphQL resolver: they are mainly responsible for understanding requests and responses.
-- Re-usable services
-- Testable: Since the logic in a controller or resolver is thinner and simpler, it becomes really easy to test. also, testing business processes becomes more isolated. it is easier to stub and check whether specific processes are invoked within our service.
+**Installation**:
+- Install Rails and set up GraphQL gem by following [this tutorial](https://www.howtographql.com/graphql-ruby/1-getting-started/). we assume you create a Link model, controller, view, and records.
 
+**Focus points**
+- TDD approach to create GraphQL.
+- Create queries feature.
+- Create mutations feature.
 
-### Implement
+### Implementation
 ----------------------------------------
 
 First let’s create a `new ProductCreator` And then just dump all our logic inside a new Ruby class:

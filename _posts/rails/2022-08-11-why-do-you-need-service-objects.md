@@ -62,7 +62,7 @@ end
 - Testable: Since the logic in a controller or resolver is thinner and simpler, it becomes really easy to test. also, testing business processes becomes more isolated. it is easier to stub and check whether specific processes are invoked within our service.
 
 
-### Implement
+### Implementation
 ----------------------------------------
 
 First let’s create a `new ProductCreator` And then just dump all our logic inside a new Ruby class:
