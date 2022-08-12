@@ -1,27 +1,30 @@
 ---
 layout: post
-title: "Why You Need Service Objects"
-subtitle: "Ruby on Rails service objects"
+title: "TDD GraphQL on Rails"
+subtitle: "Ruby on Rails with Rspec"
 date: 2022-08-11
 author: "Theo Cha"
 tags:
     - Ruby on Rails
+    - Rspec
+    - GraphQL
 ---
 
 
-> Why You Need Service Objects?
+> Let's do TDD with GraphQL + Rails + Rspec
 
-### The problems
+![GraphQL is cool](/img/post/graphql-is-cool.jpeg "GraphQL is cool")
+
+### Query for Returning product
 ----------------------------------------
-As your application grows you will see domain/business logic scattered across models, controllers and GraphQL resolvers. many logics don't belong to controllers and resolvers or models, making it difficult to reuse and maintain code.
+
+We have a `product.rb` file in `app/models` that will looks as following:
 
 ```cpp
-class ProductController < ApplicationController
-  def create
-    Product.new(*args)
-  end
+class Product < ApplicationRecord
 end
 ```
+
 This seems fine but as your application grows, things can easily become a mess. For example,
 
 ```cpp
@@ -47,7 +50,7 @@ Service objects allow you to extract this logic into a separate class. This simp
 
 ```cpp
 class ProductController < ApplicationController
-  def create
+  def
     ProductCreator.create_product
   end
 end
@@ -98,7 +101,7 @@ end
 ### Service Object Syntactic Sugar
 ----------------------------------------
 
-We can make `the ProductCreator.new(arguments).create_product` chain simpler by adding a class method that instantiates the ProductCreator and calls the create method for us:
+We can make `the ProductCreator.new(arguments).create` chain simpler by adding a class method that instantiates the ProductCreator and calls the create method for us:
 
 ```cpp
 class ProductCreator
@@ -110,8 +113,10 @@ class ProductCreator
     @name = name
   end
 
-  def call
-    Product.create!(name: @name)
+  def create_product
+    Product.create!(
+      name: @name
+    )
     rescue ActiveRecord::RecordNotUnique => e
      # handle duplicate entry
     end
@@ -124,7 +129,9 @@ and then, we can call the service object within the application in a simpler way
 ```cpp
 class ProductController < ApplicationController
   def create
-    ProductCreator.call(name: params[:name])
+    ProductCreator.call(
+      name: params[:name]
+    ).create_product
   end
 end
 ```
