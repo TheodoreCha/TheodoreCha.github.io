@@ -42,6 +42,8 @@ In this article, I will use the following technologies:
 
 #### Setup specs
 
+Run below spec file and yes, fail first.
+
 ```cpp
 require 'rails_helper'
 RSpec.describe Link, type: :request do
@@ -67,7 +69,7 @@ RSpec.describe Link, type: :request do
 end
 ```
 
-Run the spec file and yes, fail first.
+Here is a simple query field that returns `Link` records.
 
 #### Setup Query type
 ```cpp
@@ -83,14 +85,15 @@ module Types
     end
   end
 end
-
 ```
+
+Now, we run the spec file, all tests will pass.
 
 ### Mutations
 ----------------------------------------
 #### Setup a service
 
-Before setting up the spec file, I want to decouple a creation logic from the GraphQL resolver because:
+Before setting up the spec file, I want to decouple a creation logic from the GraphQL resolver to a service object because:
 
 - Thin Rails controller and GraphQL resolver: they are mainly responsible for understanding requests and responses.
 - Re-usable services
@@ -151,7 +154,7 @@ Now, you run the spec file again and all test pass.
 
 #### Setup mutations spec
 
-We are going to create a spec file for the mutations. since we decoupled the creation logic from the Mutation's resolver, we just need to make sure whether the `LinkCreate` service is executed.
+We are going to create a spec file for the mutations. since we decoupled the creation logic from the Mutation's resolver, we need to ensure whether the `LinkCreate` service is executed.
 
 ```cpp
 #spec/graphql/mutations/create_link.rb
@@ -188,7 +191,7 @@ end
 
 Run the spec file and yes, fail first.
 
-#### Mutation
+#### Adding Mutation field
 
 Add the `create_link` filed at `mutation_type.rb`
 
