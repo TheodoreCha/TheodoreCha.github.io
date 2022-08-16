@@ -13,7 +13,7 @@ tags:
 
 > Fail first, I am not afraid of failing. I am saying this in my real life. For example:
 
-![Uncle Bob](/img/post/unit-test-test-double-01.png "Uncle Bob")
+![Uncle Bob](/img/post/unit-test01.png "Uncle Bob")
 
 Before starting to say anything about testing, I can’t forget to say about Uncle bob because I have learned TDD from his book – ‘Clean code’.
 
