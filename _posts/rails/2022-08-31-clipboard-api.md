@@ -41,8 +41,6 @@ There are four methods and it took some time to fully understand what I should u
 
 #### How do its permissions work?
 
-Because on the doc, it says:
-
 > Calls to the methods of the Clipboard object will not succeed if the user hasn't granted the needed permissions using the Permissions API and the 'clipboard-read' or ‘clipboard-write’ permission as appropriate.
 
 I thought we need to always ask for permission to use this new API feature but the permissions are only for `Clipboard.read()`, `Clipboard.readText()`. Basically only for reading methods.
