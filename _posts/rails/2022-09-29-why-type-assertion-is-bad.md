@@ -94,3 +94,4 @@ This way if the object literal is missing any properties it will throw a runtime
 
 - <https://www.typescriptlang.org/docs/handbook/basic-types.html#type-assertions>
 - <https://www.bytelimes.com/why-you-should-avoid-type-assertions-in-typescript/#:~:text=It%20weakens%20Type%20Safety&text=Because%20of%20this%2C%20type%20assertions,party%20library%20is%20not%20accurate.>
+- <https://radlohead.gitbook.io/typescript-deep-dive/type-system/type-assertion>
