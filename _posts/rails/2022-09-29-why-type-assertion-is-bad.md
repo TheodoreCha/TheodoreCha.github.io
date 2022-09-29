@@ -18,6 +18,20 @@ While TypeScript provides type safety, it also gives us the ability to override 
 
 Type assertion in TypeScript is the syntax and angle-bracket syntax made available by TypeScript to ‘assert’ any TypeScript identifier to a type of the implementer’s choosing.
 
+```ts
+// One is the as-syntax:
+let someValue: unknown = "this is a string";
+let strLength: number = (someValue as string).length;
+
+// The other version is the “angle-bracket” syntax:
+let someValue: unknown = "this is a string";
+let strLength: number = (<string>someValue).length;
+```
+
+## Why is it bad?
+
+While type assertions can be very useful when used in the right use case, they can be misused and weaken type safety because it doesn’t do any special data checking. Type assertions are a way to tell the compiler, “Just follow me, I know what I’m doing.” sometimes this can lead to the weakening of type safety which is the main purpose of using TypeScript.
+
 ### Examples
 
 It weakens Type Safety
