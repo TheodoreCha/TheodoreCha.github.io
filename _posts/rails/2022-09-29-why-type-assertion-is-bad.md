@@ -82,23 +82,23 @@ Here is the best practice. we should use Type Annotations over Type Assertions. 
 
 ```ts
 // bad :(
-  const theo = {
-    name: 'Theo',
-    age: 33,
+const theo = {
+  name: 'Theo',
+  age: 33,
 } as Human
 // bad :(
 const chelsea = <Human>{
-    name: 'Chelsea',
-    age: 30,
+  name: 'Chelsea',
+  age: 30,
 };
  
  
 we should use the below version Instead,
 // Good :)
 const theo: Human = {
-    name: 'Theo',
-    age: 33,
-    occupation: 'programmer'
+  name: 'Theo',
+  age: 33,
+  occupation: 'programmer'
 };
 ```
 
