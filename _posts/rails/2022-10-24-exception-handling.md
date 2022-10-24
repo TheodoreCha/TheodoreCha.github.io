@@ -8,7 +8,8 @@ tags:
   - Ruby on Rails
 ---
 
-> Why exception handling?
+## Why exception handling?
+
 > Even if software engineers write codes perfectly, there are usually unexpected cases that they can not fully cover in many edge cases. we often say never trust users. we always assume that user will run software in a very unexpected way. but we can prepare for the exception in advance
 
 ## What?
@@ -48,7 +49,8 @@ end
 
 This is one way to write a basic ruby exception handler. it catches common errors, as rescue without any arguments will catch any StandardError and its subclasses.
 
-Avoid rescuing StandardError. Don’t rescue Exception.
+### Avoid rescuing StandardError. Don’t rescue Exception.
+
 Ruby’s Exception is the parent class to all errors. we should avoid using StandardError because it even secures errors that we suppose not to do and it leads to unexpected behavior. for example, if we secure such as memory errors, or SignalException::Interrupt, these do not belong to the application scope but rather belong to external factors.
 
 The safest approach is to rescue the errors you are expecting and deal with the consequences of that error inside the rescue block. In the event of an unexpected error in your application, you want to know that a new error has occurred and deal with the consequences of that new error inside its own rescue block. Being specific with rescue means your code doesn’t accidentally swallow new errors. You avoid subtle hidden errors that lead to unexpected behavior for your users and bug hunting for you.
