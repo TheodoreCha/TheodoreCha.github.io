@@ -2,7 +2,7 @@
 layout: post
 title: "Exception handling"
 subtitle: "Ruby on Rails"
-date: 2022-09-29
+date: 2022-10-24
 author: "Theo Cha"
 tags:
   - Ruby on Rails
