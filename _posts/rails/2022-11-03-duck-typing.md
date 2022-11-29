@@ -61,8 +61,8 @@ end
 If we try those classes:
 
 ```console
-Idol.new(Twice.new).performance #=> "큐티"
-Idol.new(Bts.new).performance  #=> "칼군무"
+Idol.new(BlackPink.new).performance #=> "Sexy dance"
+Idol.new(Bts.new).performance  #=> "Smooth dance"
 ```
 
 ## References
