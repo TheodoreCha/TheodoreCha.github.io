@@ -14,8 +14,7 @@ tags:
 
 ---
 
-- Blocks are enclosed in a do / end statement or between brackets {}, and they can have multiple arguments.
-  The argument names are defined between two pipe | characters.
+Blocks are enclosed in a do / end statement or between brackets {}, and they can have multiple arguments. The argument names are defined between two pipe characters.
 
 ```ruby
 block_name {
@@ -31,7 +30,9 @@ block_name do
 end
 ```
 
-- `yield` keyword
+##### `yield` keyword
+
+---
 
 ```ruby
 def test
@@ -65,8 +66,11 @@ test {|i| puts "You are in the block #{i}"}
 # You are in the block 100
 ```
 
-- Implicit vs Explicit Blocks
-  Blocks can be “explicit” or “implicit”.Explicit means that you give it a name in your parameter list. You can pass an explicit block to another method or save it into a variable to use later.
+##### Implicit vs Explicit Blocks
+
+---
+
+Blocks can be “explicit” or “implicit”.Explicit means that you give it a name in your parameter list. You can pass an explicit block to another method or save it into a variable to use later.
 
 ```ruby
 def explicit_block(&block)
@@ -80,9 +84,7 @@ explicit_block { puts "Explicit block called" }
 ---
 
 Using blocks give us closure-like structures. Used properly, they can reduce repetition and even make coding less error-prone.
-Let's have a look an example.
-
-- A client has requested feature is the ability to take all the prices on an order and total them. and we have an array of prices from a database.
+Let's have a look an example. A client has requested feature is the ability to take all the prices on an order and total them. and we have an array of prices from a database.
 
 ```ruby
 item_prices = [3, 24, 9]
@@ -106,7 +108,7 @@ puts total(item_prices)
 # Output: 36
 ```
 
-- After first implement, the client request a second feature that can process a refund for lost orders. It needs to loop through the invoice prices, and subtract each amount from the customer’s account balance.
+After first implement, the client request a second feature that can process a refund for lost orders. It needs to loop through the invoice prices, and subtract each amount from the customer’s account balance.
 
 ```ruby
 def refund(prices)
@@ -147,7 +149,7 @@ end
 
 The next question will be how will you set up the variables you need prior to running the loop? And how will you execute the code you need within the loop?
 
-### Use-case for the block
+##### Use-case for the block
 
 ---
 
