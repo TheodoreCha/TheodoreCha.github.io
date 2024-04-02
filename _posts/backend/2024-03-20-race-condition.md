@@ -47,6 +47,50 @@ As you can see, the total vote should be 2 instead of 1. the problem is that bef
 
 ### How to fix
 
+### Optimistic and pessimistic locks
+
+#### Optimistic lock
+
+Optimistic Locking is a technique where you keep track of a record's version number (or use dates, timestamps, or checksums/hashes) when you first read it. Before updating the record, you make sure the version hasn't changed. During the update, you specifically check that the version matches to ensure the update is done in one go (meaning the record hasn't been altered by someone else in the meantime). You also update the version number to reflect the change.
+
+```ruby
+class Document < ApplicationRecord
+  # Rails uses the 'lock_version' column by default for optimistic locking.
+  # Make sure your model's table has this column.
+end
+
+# When updating a record
+document = Document.find(1)
+document.title = "New Title"
+
+begin
+  document.save
+rescue ActiveRecord::StaleObjectError
+  # This error is raised if the record has been updated by someone else since you loaded it.
+  puts "Someone else has already updated this document."
+end
+```
+
+#### Pessimistic locks
+
+Pessimistic Locking means you lock a record so only you can use it until you're done with it. It's more secure than Optimistic Locking but you need to design your app carefully to avoid deadlocks.
+
+```ruby
+class Document < ApplicationRecord
+  # Assuming Document is your model
+end
+
+# To lock a record for exclusive use
+Document.transaction do
+  document = Document.lock.find(1)
+  # Now the document is locked for exclusive access by this transaction
+
+  document.update(title: "Exclusive Update")
+
+  # The record is automatically unlocked at the end of the transaction block
+end
+```
+
 ##### 1. Remove the critical area
 
 By refactoring, we can use an atomic operation. in other word, there is no process like reading and modifying, while the operation is running.
